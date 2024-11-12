@@ -1,3 +1,4 @@
 1. GitHub Repository Setup.
 2. Project Template Creation (template.py) [Creating Folders in Pythonic Way].
 3. Setup Virtual Environment (using conda prompt), Project Setup and Requirements Installation.
+4. Add Configuration and Utils.
