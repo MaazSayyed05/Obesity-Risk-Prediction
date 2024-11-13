@@ -1,5 +1,4 @@
 {
-    "id": "int64",
     "Gender": "object",
     "Age": "float64",
     "Height": "float64",

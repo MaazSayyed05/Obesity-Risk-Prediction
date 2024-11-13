@@ -6,6 +6,7 @@ st.sidebar.header("User Information")
 user_id = st.sidebar.text_input("Enter ID")
 user_name = st.sidebar.text_input("Enter Name")
 
+print(user_id, user_name, type(user_id))
 
 st.sidebar.header("Model and Database Settings")
 

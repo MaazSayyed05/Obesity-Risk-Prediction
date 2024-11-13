@@ -24,6 +24,8 @@ class Training:
         # Load data
         data = pd.read_csv(Path(self.config.data_path))
 
+        data = data.drop(['id'],axis=1)
+        
         # Save Schema of 
         save_json(Path(self.config.schema_path),data.dtypes.apply(lambda x: x.name).to_dict())
 
@@ -105,7 +107,22 @@ class Training:
         }
 
         save_json(Path(self.config.metrics_path),metrics)
+    
+    def predict(self,data):
+        model_path, transform_path = self.config.model_path, self.config.preprocessor_path
 
+        model = load_pickle(model_path)
+        transform_obj = load_pickle(transform_path)
+
+        data_transform = transform_obj.transform(data)
+
+        predict = model.predict(data_transform)
+        
+        # target encode
+        target_encode = ['Insufficient_Weight','Normal_Weight','Overweight_Level_I','Overweight_Level_II','Obesity_Type_I','Obesity_Type_II','Obesity_Type_III']
+
+        return target_encode[predict]
+        
 
 if __name__ == '__main__':
     # Example usage
