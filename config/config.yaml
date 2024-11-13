@@ -1,10 +1,12 @@
 
+
 data_path: data/data.csv
+clean_data_path: data/data_clean_balanced.csv
 train_path: data/train.csv
 test_path: data/test.csv
 
 preprocessor_path: artifacts/preprocessor.pkl
 model_path: artifacts/model.pkl
 
-
-
+metrics_path: scores.json
+schema_path: schema.json

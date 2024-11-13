@@ -18,7 +18,7 @@ import base64
 
 
 
-@ensure_annotations
+# @ensure_annotations
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
     """Read a yaml file and return a ConfigBox object.
 
@@ -38,7 +38,7 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
 
 
 
-@ensure_annotations
+# @ensure_annotations
 def create_directories(path_to_directories: list, verbose=True):
     """
     Creates list of directories
@@ -55,7 +55,7 @@ def create_directories(path_to_directories: list, verbose=True):
             pass
 
 
-@ensure_annotations
+# @ensure_annotations
 def save_csv(path: Path, data: pd.DataFrame):
     """
     save csv data
@@ -70,7 +70,7 @@ def save_csv(path: Path, data: pd.DataFrame):
     # return path
 
 
-@ensure_annotations
+# @ensure_annotations
 def save_json(path: Path, data: dict):
     """
     save json data
@@ -86,7 +86,7 @@ def save_json(path: Path, data: dict):
     # logging.info(f"json file saved at: {path}.")
 
 
-@ensure_annotations
+# @ensure_annotations
 def load_json(path: Path) -> ConfigBox:
     """load json files data
 
@@ -103,7 +103,7 @@ def load_json(path: Path) -> ConfigBox:
     return ConfigBox(content)
 
 
-@ensure_annotations
+# @ensure_annotations
 def save_pickle(file_path, obj):
 
     dir_path = os.path.dirname(file_path)
@@ -114,7 +114,7 @@ def save_pickle(file_path, obj):
         pickle.dump(obj, file_obj)  # file_obj as file_path
 
 
-@ensure_annotations
+# @ensure_annotations
 def load_pickle(file_path):
 
     with open(file_path, "rb") as file_obj:
