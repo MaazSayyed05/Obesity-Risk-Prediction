@@ -5,9 +5,8 @@ seaborn
 scikit-learn
 xgboost
 mysql-connector-python
-# pickle
+pickle
 # json
-imblearn
 
 # notebook
 python-box==6.0.2
@@ -15,6 +14,6 @@ pyYAML
 ensure==1.0.2
 joblib
 types-PyYAML
-
+gradio
 
 -e .
